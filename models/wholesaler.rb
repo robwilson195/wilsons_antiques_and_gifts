@@ -6,7 +6,7 @@ class Wholesaler
 
   def initialize(options)
     @id = options["id"].to_i if options["id"]
-    @name = options["id"]
+    @name = options["name"]
     @description = options["description"]
     @contact_number = options["contact_number"].to_i
     @logo_url = options["logo_url"]
@@ -21,9 +21,35 @@ class Wholesaler
     @id = result[0]["id"].to_i
   end
 
+  def update
+    sql = "UPDATE wholesalers SET (name, description, contact_number, logo_url)
+    VALUES ($1, $2, $3, $4)"
+    values = [@name, @description, @contact_number, @logo_url]
+    SqlRunner.run(sql, values)
+  end
+
+  def delete
+    sql = "DELETE FROM wholesalers WHERE id = $1"
+    value = [@id]
+    SqlRunner.run(sql, value)
+  end
+
   def self.delete_all
     sql = "DELETE FROM wholesalers"
     SqlRunner.run(sql)
+  end
+
+  def self.all
+    sql = "SELECT * FROM wholesalers"
+    result = SqlRunner.run(sql)
+    return result.map{|wholesaler| Wholesaler.new(wholesaler)}
+  end
+
+  def self.find(id)
+    sql = "SELECT * FROM wholesalers WHERE id = $1"
+    value = [id]
+    result = SqlRunner.run(sql, value)
+    return Wholesaler.new(result.first)
   end
 
 end
