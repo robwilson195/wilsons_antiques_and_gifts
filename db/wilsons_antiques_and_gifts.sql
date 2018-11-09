@@ -7,7 +7,8 @@ DROP TABLE IF EXISTS auctions;
 CREATE TABLE wholesalers(
   id SERIAL8 PRIMARY KEY,
   name VARCHAR(255),
-  address VARCHAR(255)
+  address VARCHAR(255),
+  logo_url TEXT
 );
 
 CREATE TABLE gifts(
@@ -18,7 +19,8 @@ CREATE TABLE gifts(
   wholesaler_id INT8 REFERENCES wholesalers(id) ON DELETE CASCADE,
   purchase_price MONEY,
   sale_price MONEY,
-  quantity INT4
+  quantity INT4,
+  image_url TEXT
 );
 
 CREATE TABLE auctions(
@@ -30,9 +32,10 @@ CREATE TABLE auctions(
 CREATE TABLE antiques(
   id SERIAL8 PRIMARY KEY,
   name VARCHAR(255),
-  description VARCHAR(255),
+  description TEXT,
   type VARCHAR(255),
   auction_id INT8 REFERENCES auctions(id) ON DELETE CASCADE,
   purchase_price MONEY,
-  sale_price MONEY
+  sale_price MONEY,
+  image_url TEXT
 );
