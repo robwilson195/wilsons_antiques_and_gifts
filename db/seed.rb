@@ -1,7 +1,7 @@
-require_relative('../controllers/auction')
-require_relative('../controllers/antique')
-require_relative('../controllers/wholesaler')
-require_relative('../controllers/gift')
+require_relative('../models/auction')
+require_relative('../models/antique')
+require_relative('../models/wholesaler')
+require_relative('../models/gift')
 require('pry')
 
 Antique.delete_all
@@ -11,20 +11,20 @@ Auction.delete_all
 
 auction1 = Auction.new({
   "venue" => "Goldenfield Town Hall",
-  "date" => "2018-07-25"
+  "collection_date" => '2018-07-25'
   })
 auction1.save
 
 auction2 = Auction.new({
   "venue" => "Marmory Comunity Centre",
-  "date" => "2018-11-4"
-  }).save
+  "collection_date" => '2018-11-4'
+  })
 auction2.save
 
 auction3 = Auction.new({
   "venue" => "Melrose Town Hall",
-  "date" => "2018-12-02"
-  }).save
+  "collection_date" => '2018-12-02'
+  })
 auction3.save
 
 antique1 = Antique.new({
@@ -116,7 +116,7 @@ gift1 = Gift.new({
   "wholesaler_id" => wholesaler1.id,
   "purchase_price" => "0.40",
   "sale_price" => "0.65",
-  "quantity" => "20"
+  "quantity" => "20",
   "image_url" => "https://www.puckator.co.uk/wholesale/images/ANG105_001.jpg"
   })
 gift1.save
@@ -128,7 +128,7 @@ gift2 = Gift.new({
   "wholesaler_id" => wholesaler1.id,
   "purchase_price" => "8.50",
   "sale_price" => "10.99",
-  "quantity" => "8"
+  "quantity" => "8",
   "image_url" => "https://www.puckator.co.uk/wholesale/images/CKP126_001.jpg"
   })
 gift2.save
@@ -140,7 +140,7 @@ gift3 = Gift.new({
   "wholesaler_id" => wholesaler2.id,
   "purchase_price" => "14.00",
   "sale_price" => "19.99",
-  "quantity" => "5"
+  "quantity" => "5",
   "image_url" => "https://imagefileshost.co.uk/sparksgiftwholesalers/700x700/BAGS03-2.jpg"
   })
 gift3.save
@@ -152,7 +152,7 @@ gift4 = Gift.new({
   "wholesaler_id" => wholesaler2.id,
   "purchase_price" => "1.00",
   "sale_price" => "1.99",
-  "quantity" => "2"
+  "quantity" => "2",
   "image_url" => "https://imagefileshost.co.uk/sparksgiftwholesalers/700x700/BM111-2.jpg"
   })
 gift4.save
@@ -164,7 +164,7 @@ gift5 = Gift.new({
   "wholesaler_id" => wholesaler2.id,
   "purchase_price" => "1.00",
   "sale_price" => "1.99",
-  "quantity" => "5"
+  "quantity" => "5",
   "image_url" => "https://imagefileshost.co.uk/sparksgiftwholesalers/700x700/BM110-2.jpg"
   })
 gift5.save
@@ -177,7 +177,7 @@ gift6 = Gift.new({
   "wholesaler_id" => wholesaler3.id,
   "purchase_price" => "8.00",
   "sale_price" => "12.99",
-  "quantity" => "7"
+  "quantity" => "7",
   "image_url" => "https://cdn.shopify.com/s/files/1/2597/5112/products/hpnbhppenbm_61ca45b4-9bbc-423c-bb9d-2d367b7ace92_large.jpg?v=1527320470"
   })
 gift6.save

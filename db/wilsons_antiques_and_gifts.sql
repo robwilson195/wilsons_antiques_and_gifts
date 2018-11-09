@@ -14,12 +14,12 @@ CREATE TABLE wholesalers(
 
 CREATE TABLE gifts(
   id SERIAL8 PRIMARY KEY,
-  name TEXT,
-  description VARCHAR(255),
+  name VARCHAR(255),
+  description TEXT,
   type VARCHAR(255),
   wholesaler_id INT8 REFERENCES wholesalers(id) ON DELETE CASCADE,
-  purchase_price MONEY,
-  sale_price MONEY,
+  purchase_price NUMERIC,
+  sale_price NUMERIC,
   quantity INT4,
   image_url TEXT
 );
@@ -27,7 +27,7 @@ CREATE TABLE gifts(
 CREATE TABLE auctions(
   id SERIAL8 PRIMARY KEY,
   venue VARCHAR(255),
-  collected_on DATE
+  collection_date DATE
 );
 
 CREATE TABLE antiques(
@@ -36,7 +36,7 @@ CREATE TABLE antiques(
   description TEXT,
   type VARCHAR(255),
   auction_id INT8 REFERENCES auctions(id) ON DELETE CASCADE,
-  purchase_price MONEY,
-  sale_price MONEY,
+  purchase_price NUMERIC,
+  sale_price NUMERIC,
   image_url TEXT
 );
