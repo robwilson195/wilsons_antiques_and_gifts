@@ -117,54 +117,67 @@ gift1 = Gift.new({
   "purchase_price" => "0.40",
   "sale_price" => "0.65",
   "quantity" => "20"
-  "img_url" => "https://www.puckator.co.uk/wholesale/images/ANG105_001.jpg"
+  "image_url" => "https://www.puckator.co.uk/wholesale/images/ANG105_001.jpg"
   })
 gift1.save
 
 gift2 = Gift.new({
-  "name" => "Angel Wings Hanging Decoration",
-  "description" => "Material: Resin",
-  "type" => "decoration",
+  "name" => "Simon's Cat Shaped Clock",
+  "description" => "Material: MDF. Wall mountable.",
+  "type" => "furniture",
   "wholesaler_id" => wholesaler1.id,
-  "purchase_price" => "0.40",
-  "sale_price" => "0.65",
-  "quantity" => "20"
-  "img_url" => "https://www.puckator.co.uk/wholesale/images/ANG105_001.jpg"
+  "purchase_price" => "8.50",
+  "sale_price" => "10.99",
+  "quantity" => "8"
+  "image_url" => "https://www.puckator.co.uk/wholesale/images/CKP126_001.jpg"
   })
 gift2.save
 
 gift3 = Gift.new({
-  "name" => "Angel Wings Hanging Decoration",
-  "description" => "Material: Resin",
-  "type" => "decoration",
-  "wholesaler_id" => wholesaler1.id,
-  "purchase_price" => "0.40",
-  "sale_price" => "0.65",
-  "quantity" => "20"
-  "img_url" => "https://www.puckator.co.uk/wholesale/images/ANG105_001.jpg"
+  "name" => "Tropical Plant 3 Piece Vanity Bag Set",
+  "description" => "Set Of 3 Vanity Bags With Colourful Tropical Plant Design On. Set Contains 3 Seperate Bags (Priced As A Set)",
+  "type" => "accessory",
+  "wholesaler_id" => wholesaler2.id,
+  "purchase_price" => "14.00",
+  "sale_price" => "19.99",
+  "quantity" => "5"
+  "image_url" => "https://imagefileshost.co.uk/sparksgiftwholesalers/700x700/BAGS03-2.jpg"
   })
 gift3.save
 
 gift4 = Gift.new({
-  "name" => "Angel Wings Hanging Decoration",
-  "description" => "Material: Resin",
-  "type" => "decoration",
-  "wholesaler_id" => wholesaler1.id,
-  "purchase_price" => "0.40",
-  "sale_price" => "0.65",
-  "quantity" => "20"
-  "img_url" => "https://www.puckator.co.uk/wholesale/images/ANG105_001.jpg"
+  "name" => "Baby Girl Card",
+  "description" => "Pink Card With Gold And Silver Star Design And Gold Text. 16cm x 16cm.",
+  "type" => "card",
+  "wholesaler_id" => wholesaler2.id,
+  "purchase_price" => "1.00",
+  "sale_price" => "1.99",
+  "quantity" => "2"
+  "image_url" => "https://imagefileshost.co.uk/sparksgiftwholesalers/700x700/BM111-2.jpg"
   })
 gift4.save
 
 gift5 = Gift.new({
-  "name" => "Angel Wings Hanging Decoration",
-  "description" => "Material: Resin",
-  "type" => "decoration",
-  "wholesaler_id" => wholesaler1.id,
-  "purchase_price" => "0.40",
-  "sale_price" => "0.65",
-  "quantity" => "20"
-  "img_url" => "https://www.puckator.co.uk/wholesale/images/ANG105_001.jpg"
+  "name" => "Baby Boy Card",
+  "description" => "Blue Card With Gold And Silver Star Design And Gold Text. 16cm x 16cm.",
+  "type" => "card",
+  "wholesaler_id" => wholesaler2.id,
+  "purchase_price" => "1.00",
+  "sale_price" => "1.99",
+  "quantity" => "5"
+  "image_url" => "https://imagefileshost.co.uk/sparksgiftwholesalers/700x700/BM110-2.jpg"
   })
 gift5.save
+
+
+gift6 = Gift.new({
+  "name" => "Harry Potter Wand Pen",
+  "description" => "This black ink pen is a replica of Harry Potter’s famous wand from the movies. This is a truly magical gift for fans of the Harry Potter franchise, and is great for use at home, at work, or at school.",
+  "type" => "stationary",
+  "wholesaler_id" => wholesaler3.id,
+  "purchase_price" => "8.00",
+  "sale_price" => "12.99",
+  "quantity" => "7"
+  "image_url" => "https://cdn.shopify.com/s/files/1/2597/5112/products/hpnbhppenbm_61ca45b4-9bbc-423c-bb9d-2d367b7ace92_large.jpg?v=1527320470"
+  })
+gift6.save
