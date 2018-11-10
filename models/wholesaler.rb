@@ -34,6 +34,16 @@ class Wholesaler
     SqlRunner.run(sql, value)
   end
 
+  def gifts
+    sql = "SELECT gifts.* FROM gifts
+    INNER JOIN wholesalers
+    ON wholesalers.id = gifts.wholesaler_id
+    WHERE gifts.wholesaler_id = $1"
+    value = [@id]
+    results = SqlRunner.run(sql, value)
+    return results.map { |gift| Gift.new(gift) }
+  end
+
   def self.delete_all
     sql = "DELETE FROM wholesalers"
     SqlRunner.run(sql)

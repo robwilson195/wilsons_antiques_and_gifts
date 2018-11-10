@@ -181,6 +181,3 @@ gift6 = Gift.new({
   "image_url" => "https://cdn.shopify.com/s/files/1/2597/5112/products/hpnbhppenbm_61ca45b4-9bbc-423c-bb9d-2d367b7ace92_large.jpg?v=1527320470"
   })
 gift6.save
-
-binding.pry
-nil

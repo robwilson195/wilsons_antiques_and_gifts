@@ -42,6 +42,16 @@ class Antique
     SqlRunner.run(sql, value)
   end
 
+  def auction
+    sql = "SELECT auctions.* FROM auctions
+    INNER JOIN antiques
+    ON antiques.auction_id = auctions.id
+    WHERE auctions.id = $1"
+    value = [@auction_id]
+    result = SqlRunner.run(sql, value)
+    return Auction.new(result.first)
+  end
+
   def self.delete_all
     sql = "DELETE FROM antiques"
     SqlRunner.run(sql)
