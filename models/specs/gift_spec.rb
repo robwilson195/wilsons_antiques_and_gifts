@@ -33,4 +33,8 @@ class GiftTest < Minitest::Test
       assert_equal(2, @gift1.quantity)
   end
 
+  def test_show_wholesaler
+    assert_equal(@wholesaler1.name, @gift1.wholesaler.name)
+  end
+
 end

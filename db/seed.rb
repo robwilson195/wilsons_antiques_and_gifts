@@ -2,7 +2,7 @@ require_relative('../models/auction')
 require_relative('../models/antique')
 require_relative('../models/wholesaler')
 require_relative('../models/gift')
-require('pry')
+require('pry-byebug')
 
 Antique.delete_all
 Gift.delete_all

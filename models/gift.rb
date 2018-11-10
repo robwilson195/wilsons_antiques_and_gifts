@@ -1,4 +1,6 @@
 require_relative('../db/sql_runner')
+require_relative('./wholesaler.rb')
+require('pry-byebug')
 
 class Gift
 
@@ -26,7 +28,7 @@ class Gift
     values = [@name, @description, @type, @wholesaler_id,
     @purchase_price, @sale_price, @quantity, @image_url]
     result = SqlRunner.run(sql, values)
-    @id = result[0]["id"]
+    @id = result[0]["id"].to_i
   end
 
   def update
@@ -45,6 +47,16 @@ class Gift
 
   def sell(quantity_sold)
     @quantity -= quantity_sold
+  end
+
+  def wholesaler
+    sql = "SELECT wholesalers.* FROM wholesalers
+    INNER JOIN gifts
+    ON gifts.wholesaler_id = wholesalers.id
+    WHERE wholesalers.id = $1"
+    value = [@wholesaler_id]
+    result = SqlRunner.run(sql, value)
+    return Wholesaler.new(result[0])
   end
 
   def self.delete_all

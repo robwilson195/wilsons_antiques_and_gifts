@@ -25,7 +25,7 @@ class Antique
     values = [@name, @description, @type, @auction_id,
     @purchase_price, @sale_price, @image_url]
     result = SqlRunner.run(sql, values)
-    @id = result[0]["id"]
+    @id = result[0]["id"].to_i
   end
 
   def update
