@@ -1,10 +1,32 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
-  <head>
-    <meta charset="utf-8">
-    <title>Wilsons | Antiques and Gifts</title>
-  </head>
-  <body>
-    <%= yield %>
-  </body>
+<head>
+  <meta charset="utf-8">
+  <title>WAG Stock Management</title>
+
+  <link rel="stylesheet" type="text/css" href="/styles/structure.css">
+</head>
+<body>
+  <header>
+    <h1>Wilson's Antiques and Gifts Stock Management</h1>
+  </header>
+  <main class="flex flex--row">
+    <nav>
+      <table>
+        <tr>
+          <td><a href="/">Home</a></td>
+        </tr>
+        <tr>
+          <td><a href="/wholesalers">Wholesalers</a></td>
+        </tr>
+        <tr>
+          <td><a href="/auctions">Auctions</a></td>
+        </tr>
+      </table>
+    </nav>
+    <section id="content">
+      <%= yield %>
+    </section>
+  </main>
+</body>
 </html>
