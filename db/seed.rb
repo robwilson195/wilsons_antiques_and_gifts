@@ -30,7 +30,7 @@ auction3.save
 antique1 = Antique.new({
   "name" => "Victorian Button Back Armchair",
   "description" => "Red Velvet Armchair from Victorian era, slight marking on rear left leg.",
-  "type" => "chair",
+  "type" => "Chair",
   "auction_id" => auction1.id,
   "purchase_price" => "380.00",
   "sale_price" => "450.00",
@@ -41,7 +41,7 @@ antique1.save
 antique2 = Antique.new({
   "name" => "Fraureuth Gilded Porcelain Cup and Saucer",
   "description" => "The gilded design on the white ground is exquisite and all intact. Both cup and saucer are of square construction with foliate gilded edge.",
-  "type" => "tableware",
+  "type" => "Tableware",
   "auction_id" => auction1.id,
   "purchase_price" => "110.00",
   "sale_price" => "150.00",
@@ -52,7 +52,7 @@ antique2.save
 antique3 = Antique.new({
   "name" => "Edwardian Mahogany Dressing Stand",
   "description" => "This type of furniture is increasingly popular, being compact, useful and with the fashion for mens grooming and barbering. Excellent condition.",
-  "type" => "dressing table",
+  "type" => "Dressing Table",
   "auction_id" => auction1.id,
   "purchase_price" => "300.00",
   "sale_price" => "400.00",
@@ -63,7 +63,7 @@ antique3.save
 antique4 = Antique.new({
   "name" => "Alfred Parsons 1847-1920",
   "description" => "Watercolour by Alfred Parsons 1847-1920 RA, RI. Coastal View.",
-  "type" => "art",
+  "type" => "Art",
   "auction_id" => auction2.id,
   "purchase_price" => "650.00",
   "sale_price" => "780.00",
@@ -74,7 +74,7 @@ antique4.save
 antique5 = Antique.new({
   "name" => "Victorian British Light Infantry Officers Sword",
   "description" => "Condition is good, blade superbly engraved, consider mid Victorian.",
-  "type" => "miscellaneous",
+  "type" => "Miscellaneous",
   "auction_id" => auction2.id,
   "purchase_price" => "350.00",
   "sale_price" => "420.00",
@@ -112,7 +112,7 @@ wholesaler3.save
 gift1 = Gift.new({
   "name" => "Angel Wings Hanging Decoration",
   "description" => "Material: Resin",
-  "type" => "decoration",
+  "type" => "Decoration",
   "wholesaler_id" => wholesaler1.id,
   "purchase_price" => "0.40",
   "sale_price" => "0.65",
@@ -124,7 +124,7 @@ gift1.save
 gift2 = Gift.new({
   "name" => "Simon's Cat Shaped Clock",
   "description" => "Material: MDF. Wall mountable.",
-  "type" => "furniture",
+  "type" => "Furniture",
   "wholesaler_id" => wholesaler1.id,
   "purchase_price" => "8.50",
   "sale_price" => "10.99",
@@ -136,7 +136,7 @@ gift2.save
 gift3 = Gift.new({
   "name" => "Tropical Plant 3 Piece Vanity Bag Set",
   "description" => "Set Of 3 Vanity Bags With Colourful Tropical Plant Design On. Set Contains 3 Seperate Bags (Priced As A Set)",
-  "type" => "accessory",
+  "type" => "Accessory",
   "wholesaler_id" => wholesaler2.id,
   "purchase_price" => "14.00",
   "sale_price" => "19.99",
@@ -148,7 +148,7 @@ gift3.save
 gift4 = Gift.new({
   "name" => "Baby Girl Card",
   "description" => "Pink Card With Gold And Silver Star Design And Gold Text. 16cm x 16cm.",
-  "type" => "card",
+  "type" => "Card",
   "wholesaler_id" => wholesaler2.id,
   "purchase_price" => "1.00",
   "sale_price" => "1.99",
@@ -160,7 +160,7 @@ gift4.save
 gift5 = Gift.new({
   "name" => "Baby Boy Card",
   "description" => "Blue Card With Gold And Silver Star Design And Gold Text. 16cm x 16cm.",
-  "type" => "card",
+  "type" => "Card",
   "wholesaler_id" => wholesaler2.id,
   "purchase_price" => "1.00",
   "sale_price" => "1.99",
@@ -173,7 +173,7 @@ gift5.save
 gift6 = Gift.new({
   "name" => "Harry Potter Wand Pen",
   "description" => "This black ink pen is a replica of Harry Potter’s famous wand from the movies. This is a truly magical gift for fans of the Harry Potter franchise, and is great for use at home, at work, or at school.",
-  "type" => "stationary",
+  "type" => "Stationary",
   "wholesaler_id" => wholesaler3.id,
   "purchase_price" => "8.00",
   "sale_price" => "12.99",

@@ -1,1 +1,45 @@
-<h1>Hello world</h1>
+<h1>Inventory</h1>
+<p>Click on the names of items or their wholesalers/auctions for more details.</p>
+<h2><em>Gifts:</em></h2>
+<table class="gifts_table">
+  <tr>
+    <th>Name</th>
+    <th>Type</th>
+    <th>Wholesaler</th>
+    <th>Purchase Price</th>
+    <th>Sale Price</th>
+    <th>Quantity</th>
+    <th></th>
+  </tr>
+  <% @gifts.each do |gift|%>
+  <tr>
+    <td><a href="/gifts/<%= gift.id %>"><%=gift.name%></a></td>
+    <td><%=gift.type%></td>
+    <td><a href="/wholesalers/<%= gift.wholesaler.id %>"><%=gift.wholesaler.name%></td>
+    <td><%=gift.purchase_price%></td>
+    <td><%=gift.sale_price%></td>
+    <td><%=gift.quantity%></td>
+    <td></td>
+  </tr>
+  <% end %>
+</table>
+
+<h2><em>Auctions:</em></h2>
+<table class="antiques_table">
+  <tr>
+    <th>Name</th>
+    <th>Type</th>
+    <th>Auction</th>
+    <th>Purchase Price</th>
+    <th>Sale Price</th>
+  </tr>
+  <% @antiques.each do |antique|%>
+  <tr>
+    <td><a href="/antiques/<%= antique.id %>"><%=antique.name%></a></td>
+    <td><%=antique.type%></td>
+    <td><a href="/auctions/<%= antique.auction.id %>"><%=antique.auction.venue%></a></td>
+    <td><%=antique.purchase_price%></td>
+    <td><%=antique.sale_price%></td>
+  </tr>
+  <% end %>
+</table>

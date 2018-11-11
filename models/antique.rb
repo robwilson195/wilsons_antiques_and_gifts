@@ -2,7 +2,7 @@ require_relative('../db/sql_runner')
 
 class Antique
 
-  attr_reader :name, :description, :type, :auction_id, :purchase_price, :sale_price, :image_url
+  attr_reader :id, :name, :description, :type, :auction_id, :purchase_price, :sale_price, :image_url
 
   def initialize(options)
     @id = options["id"].to_i if options["id"]

@@ -1,0 +1,26 @@
+.gifts_table td, .antiques_table td {
+  border: 1px black solid;
+  padding: 4px;
+  min-width: 100px;
+}
+
+.gifts_table th, .antiques_table th {
+  text-align: left;
+}
+
+#content table {
+  border-collapse: collapse;
+}
+
+#content table a {
+  color: black;
+  text-decoration: none;
+}
+
+#content table a:hover {
+  color: red;
+}
+
+h2 {
+  margin-bottom: 5px;
+}

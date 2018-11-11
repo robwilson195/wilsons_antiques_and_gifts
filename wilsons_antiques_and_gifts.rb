@@ -11,5 +11,7 @@ require_relative('models/gift.rb')
 also_reload('./models/*')
 
 get '/' do
+  @gifts = Gift.all_by_name
+  @antiques = Antique.all_by_name
   erb ( :index )
 end

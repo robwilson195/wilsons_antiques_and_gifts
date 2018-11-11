@@ -42,20 +42,16 @@ nav td {
 nav a {
   color: black;
   font-size: 32px;
-  border: 2px black solid;
-  border-radius: 8px;
   padding: 5px;
   text-decoration: none;
 }
 
 nav a:hover {
   color: white;
-  border: 2px white solid;
 }
 
 nav a:active {
   color: gold;
-  border: 2px gold solid;
 }
 
 .flex {
