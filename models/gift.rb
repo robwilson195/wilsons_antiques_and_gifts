@@ -114,7 +114,7 @@ class Gift
   end
 
   def self.find(id)
-    sql = "SELECT * FROM antiques WHERE id = $1"
+    sql = "SELECT * FROM gifts WHERE id = $1"
     value = [id]
     result = SqlRunner.run(sql, value)
     return Gift.new(result.first)
