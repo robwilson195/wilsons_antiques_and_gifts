@@ -2,6 +2,8 @@ body {
   background-size: 100%;
   padding: 0px;
   margin: 0px;
+  background-color: hsla(201, 67%, 90%, 1);
+
 }
 
 header {
@@ -62,4 +64,7 @@ nav a:active {
 
 .flex--row {
   flex-direction: row;
+}
+
+#content {
 }
