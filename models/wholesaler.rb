@@ -55,6 +55,13 @@ class Wholesaler
     return result.map{|wholesaler| Wholesaler.new(wholesaler)}
   end
 
+  def self.all_by_name
+    sql = "SELECT * FROM Wholesalers
+    ORDER BY name ASC"
+    result = SqlRunner.run(sql)
+    return result.map{|wholesaler| Wholesaler.new(wholesaler)}
+  end
+
   def self.find(id)
     sql = "SELECT * FROM wholesalers WHERE id = $1"
     value = [id]

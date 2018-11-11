@@ -53,6 +53,20 @@ class Auction
     return result.map{|auction| Auction.new(auction)}
   end
 
+  def self.all_by_venue
+    sql = "SELECT * FROM auctions
+    ORDER BY venue ASC"
+    result = SqlRunner.run(sql)
+    return result.map{|auction| Auction.new(auction)}
+  end
+
+  def self.all_by_date
+    sql = "SELECT * FROM auctions
+    ORDER BY collection_date ASC"
+    result = SqlRunner.run(sql)
+    return result.map{|auction| Auction.new(auction)}
+  end
+
   def self.find(id)
     sql = "SELECT * FROM auctions WHERE id = $1"
     value = [id]

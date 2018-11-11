@@ -70,6 +70,49 @@ class Gift
     return result.map{|gift| Gift.new(gift)}
   end
 
+  def self.all_by_name
+    sql = "SELECT * FROM gifts
+    ORDER BY name ASC"
+    result = SqlRunner.run(sql)
+    return result.map{|gift| Gift.new(gift)}
+  end
+
+  def self.all_by_type
+    sql = "SELECT * FROM gifts
+    ORDER BY type ASC"
+    result = SqlRunner.run(sql)
+    return result.map{|gift| Gift.new(gift)}
+  end
+
+  def self.all_by_wholesaler
+    sql = "SELECT gifts.* FROM gifts
+    INNER JOIN wholesalers ON wholesalers.id = gifts.wholesaler_id
+    ORDER BY wholesalers.name ASC"
+    result = SqlRunner.run(sql)
+    return result.map{|gift| Gift.new(gift)}
+  end
+
+  def self.all_by_purchase_price
+    sql = "SELECT * FROM gifts
+    ORDER BY purchase_price ASC"
+    result = SqlRunner.run(sql)
+    return result.map{|gift| Gift.new(gift)}
+  end
+
+  def self.all_by_sale_price
+    sql = "SELECT * FROM gifts
+    ORDER BY sale_price ASC"
+    result = SqlRunner.run(sql)
+    return result.map{|gift| Gift.new(gift)}
+  end
+
+  def self.all_by_quantity
+    sql = "SELECT * FROM gifts
+    ORDER BY quantity ASC"
+    result = SqlRunner.run(sql)
+    return result.map{|gift| Gift.new(gift)}
+  end
+
   def self.find(id)
     sql = "SELECT * FROM antiques WHERE id = $1"
     value = [id]

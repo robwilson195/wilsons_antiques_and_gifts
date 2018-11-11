@@ -63,6 +63,49 @@ class Antique
     return result.map{|antique| Antique.new(antique)}
   end
 
+  def self.all_by_name
+    sql = "SELECT * FROM antiques
+    ORDER BY name ASC"
+    result = SqlRunner.run(sql)
+    return result.map{|antique| Antique.new(antique)}
+  end
+
+  def self.all_by_type
+    sql = "SELECT * FROM antiques
+    ORDER BY type ASC"
+    result = SqlRunner.run(sql)
+    return result.map{|antique| Antique.new(antique)}
+  end
+
+  def self.all_by_auction
+    sql = "SELECT antiques.* from antiques
+    INNER JOIN auctions ON auctions.id = antiques.auction_id
+    ORDER BY auctions.collection_date ASC"
+    result = SqlRunner.run(sql)
+    return result.map{|antique| Antique.new(antique)}
+  end
+
+  def self.all_by_purchase_price
+    sql = "SELECT * FROM antiques
+    ORDER BY purchase_price ASC"
+    result = SqlRunner.run(sql)
+    return result.map{|antique| Antique.new(antique)}
+  end
+
+  def self.all_by_sale_price
+    sql = "SELECT * FROM antiques
+    ORDER BY sale_price ASC"
+    result = SqlRunner.run(sql)
+    return result.map{|antique| Antique.new(antique)}
+  end
+
+  def self.all_by_quantity
+    sql = "SELECT * FROM antiques
+    ORDER BY quantity ASC"
+    result = SqlRunner.run(sql)
+    return result.map{|antique| Antique.new(antique)}
+  end
+
   def self.find(id)
     sql = "SELECT * FROM antiques WHERE id = $1"
     value = [id]
