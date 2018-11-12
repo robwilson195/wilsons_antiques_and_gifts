@@ -15,6 +15,11 @@ get '/auctions' do
   erb (:"auctions/index")
 end
 
+# NEW
+get '/auctions/new' do
+  erb (:"auctions/new")
+end
+
 # SHOW
 get '/auctions/:id' do
   @auction = Auction.find(params["id"].to_i)

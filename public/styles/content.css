@@ -2,6 +2,7 @@
   border: 1px black solid;
   padding: 4px;
   min-width: 100px;
+  background-color: white;
 }
 
 .gifts_table th, .antiques_table th, .auctions_container th{
@@ -20,7 +21,6 @@
   font-size: 32px;
   padding: 10px;
   border: black solid 2px;
-
 }
 
 .auctions_container th {
