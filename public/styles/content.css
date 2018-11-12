@@ -1,15 +1,31 @@
-.gifts_table td, .antiques_table td {
+.gifts_table td, .antiques_table td, .auctions_container td{
   border: 1px black solid;
   padding: 4px;
   min-width: 100px;
 }
 
-.gifts_table th, .antiques_table th {
+.gifts_table th, .antiques_table th, .auctions_container th{
   text-align: left;
 }
 
-.gifts_table, .antiques_table {
+.gifts_table, .antiques_table, .auctions_container table{
   border-collapse: collapse;
+}
+
+.auctions_container table {
+  margin: 20px auto;
+}
+
+.auctions_container td {
+  font-size: 32px;
+  padding: 10px;
+  border: black solid 2px;
+
+}
+
+.auctions_container th {
+  font-size: 32px;
+  padding: 10px;
 }
 
 .gifts_table a, .antiques_table a {
@@ -88,4 +104,9 @@ h2 {
 .add_button:hover {
   color: red;
   border: red solid 2px;
+}
+
+.auctions_container {
+  margin: 0 auto;
+  min-width: 800px;
 }

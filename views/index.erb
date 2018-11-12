@@ -14,7 +14,7 @@
   <tr>
     <td><a href="/gifts/<%= gift.id %>"><%=gift.name%></a></td>
     <td><%=gift.type%></td>
-    <td><a href="/wholesalers/<%= gift.wholesaler.id %>"><%=gift.wholesaler.name%></td>
+    <td><a href="/wholesalers"><%=gift.wholesaler.name%></td>
     <td><%=gift.purchase_price%></td>
     <td><%=gift.sale_price%></td>
     <td><%=gift.quantity%></td>
@@ -35,7 +35,7 @@
   <tr>
     <td><a href="/antiques/<%= antique.id %>"><%=antique.name%></a></td>
     <td><%=antique.type%></td>
-    <td><a href="/auctions/<%= antique.auction.id %>"><%=antique.auction.venue%></a></td>
+    <td><a href="/auctions"><%=antique.auction.venue%></a></td>
     <td><%=antique.purchase_price%></td>
     <td><%=antique.sale_price%></td>
   </tr>

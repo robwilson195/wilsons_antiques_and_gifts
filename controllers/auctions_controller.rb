@@ -11,6 +11,7 @@ also_reload('../models/*')
 
 # INDEX
 get '/auctions' do
+  @auctions = Auction.all_by_date
   erb (:"auctions/index")
 end
 

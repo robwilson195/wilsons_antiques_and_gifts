@@ -1,1 +1,16 @@
-<h1>Hello World</h1>
+<h2>Auctions</h2>
+<a class="add_button" href="/auctions/new">+ Auction</a>
+<div class="auctions_container">
+<table>
+  <tr>
+    <th>Venue</th>
+    <th>Date</th>
+  </tr>
+  <% @auctions.each do |auction| %>
+  <tr>
+    <td><%= auction.venue %></td>
+    <td><%= auction.collection_date %></td>
+  </tr>
+  <% end %>
+</table>
+</div>
