@@ -1,1 +1,18 @@
-<h1>Hello World</h1>
+<h2>Wholesalers</h2>
+<a class="add_button" href="/wholesalers/new">+ Wholesaler</a>
+<section class="wholesaler_page">
+<% @wholesalers.each do |wholesaler| %>
+<div class="wholesaler_container">
+  <div class="wholesaler_details">
+    <h3><%=wholesaler.name%></h3>
+    <p><%=wholesaler.description%></p>
+    <p>Contact Number: <%=wholesaler.contact_number%></p>
+    <p>Products sourced from this wholesaler: <%=wholesaler.gifts.length%>
+    <a href="/wholesalers/<%= wholesaler.id %>/edit">Edit</a></p>
+  </div>
+  <div class="wholesaler_logo">
+    <img src="<%= wholesaler.logo_url %>" alt="<%= wholesaler.name %> Logo">
+  </div>
+</div>
+<% end %>
+</section>

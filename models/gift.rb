@@ -32,10 +32,10 @@ class Gift
   end
 
   def update
-    sql = "UPDATE gifts SET (name, description, type, wholesaler_id, purchase_price, sale_price, quantity, image_url)
-    VALUES ($1, $2, $3, $4, $5, $6, $7, $8)"
+    sql = "UPDATE gifts SET (name, description, type, wholesaler_id, purchase_price, sale_price, quantity, image_url) =
+    ($1, $2, $3, $4, $5, $6, $7, $8) WHERE gifts.id = $9"
     values = [@name, @description, @type, @wholesaler_id,
-    @purchase_price, @sale_price, @quantity, @image_url]
+    @purchase_price, @sale_price, @quantity, @image_url, @id]
     SqlRunner.run(sql, values)
   end
 

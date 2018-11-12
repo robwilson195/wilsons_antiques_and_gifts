@@ -9,7 +9,6 @@
     <th>Purchase Price</th>
     <th>Sale Price</th>
     <th>Quantity</th>
-    <th></th>
   </tr>
   <% @gifts.each do |gift|%>
   <tr>
@@ -19,12 +18,11 @@
     <td><%=gift.purchase_price%></td>
     <td><%=gift.sale_price%></td>
     <td><%=gift.quantity%></td>
-    <td></td>
   </tr>
   <% end %>
 </table>
 
-<h2><em>Auctions:</em></h2>
+<h2><em>Antiques:</em></h2>
 <table class="antiques_table">
   <tr>
     <th>Name</th>

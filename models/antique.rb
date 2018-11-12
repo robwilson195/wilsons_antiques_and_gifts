@@ -29,10 +29,10 @@ class Antique
   end
 
   def update
-    sql = "UPDATE antiques SET (name, description, type, auction_id, purchase_price, sale_price, image_url)
-    VALUES ($1, $2, $3, $4, $5, $6, $7)"
+    sql = "UPDATE antiques SET (name, description, type, auction_id, purchase_price, sale_price, image_url) =
+    ($1, $2, $3, $4, $5, $6, $7) WHERE antiques.id = $8"
     values = [@name, @description, @type, @auction_id,
-    @purchase_price, @sale_price, @image_url]
+    @purchase_price, @sale_price, @image_url, @id]
     SqlRunner.run(sql, values)
   end
 

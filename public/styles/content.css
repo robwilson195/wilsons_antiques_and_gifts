@@ -8,19 +8,84 @@
   text-align: left;
 }
 
-#content table {
+.gifts_table, .antiques_table {
   border-collapse: collapse;
 }
 
-#content table a {
+.gifts_table a, .antiques_table a {
   color: black;
   text-decoration: none;
 }
 
-#content table a:hover {
+.gifts_table a:hover, .antiques_table a:hover {
   color: red;
 }
 
 h2 {
-  margin-bottom: 5px;
+  margin-bottom: 0px;
+  display: inline-block;
+  margin-right: 15px;
+  text-decoration: underline;
+}
+
+.wholesaler_page {
+}
+
+.wholesaler_container {
+  margin: 10px auto;
+  border-bottom: black solid 2px;
+  width: 90%;
+  display: flex;
+  align-items: center;
+}
+
+.wholesaler_container img {
+  width: 100%;
+  height: auto;
+}
+
+.wholesaler_container div {
+  display: inline-block;
+  justify-content: center;
+  align-content: center;
+  height: 100%;
+  width: 45%;
+  margin: 10px auto;
+}
+
+.wholesaler_container div a {
+  text-decoration: none;
+  color: black;
+  border: 2px black solid;
+  padding: 2px;
+  display: inline-block;
+  margin-left: 10px;
+}
+
+.wholesaler_container div a {
+  text-decoration: none;
+  color: black;
+  border: 2px black solid;
+  padding: 2px;
+  display: inline-block;
+  margin-left: 10px;
+}
+
+.wholesaler_container div a:hover {
+  border: 2px red solid;
+  color: red;
+}
+
+.add_button {
+  text-decoration: none;
+  color: black;
+  border: black solid 2px;
+  border-radius: 4px;
+  background-color: white;
+  padding: 4px
+}
+
+.add_button:hover {
+  color: red;
+  border: red solid 2px;
 }

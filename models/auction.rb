@@ -20,9 +20,9 @@ class Auction
   end
 
   def update
-    sql = "UPDATE auctions SET (venue, collection_date)
-    VALUES ($1, $2)"
-    values = [@venue, @collection_date]
+    sql = "UPDATE auctions SET (venue, collection_date) =
+    ($1, $2) WHERE auctions.id = $3"
+    values = [@venue, @collection_date, @id]
     SqlRunner.run(sql, values)
   end
 

@@ -2,7 +2,8 @@ require_relative('../db/sql_runner')
 
 class Wholesaler
 
-  attr_reader :id, :name, :description, :contact_number, :logo_url
+  attr_reader :id, :name
+  attr_accessor :description, :contact_number, :logo_url
 
   def initialize(options)
     @id = options["id"].to_i if options["id"]
@@ -22,9 +23,9 @@ class Wholesaler
   end
 
   def update
-    sql = "UPDATE wholesalers SET (name, description, contact_number, logo_url)
-    VALUES ($1, $2, $3, $4)"
-    values = [@name, @description, @contact_number, @logo_url]
+    sql = "UPDATE wholesalers SET (name, description, contact_number, logo_url) = ($1, $2, $3, $4)
+    WHERE wholesalers.id = $5"
+    values = [@name, @description, @contact_number, @logo_url, @id]
     SqlRunner.run(sql, values)
   end
 
