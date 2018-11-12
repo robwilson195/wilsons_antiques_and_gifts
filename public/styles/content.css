@@ -81,6 +81,7 @@ h2 {
   padding: 2px;
   display: inline-block;
   margin-left: 10px;
+  border-radius: 3px;
 }
 
 .wholesaler_container div a {
