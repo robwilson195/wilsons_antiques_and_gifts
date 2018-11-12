@@ -7,6 +7,7 @@ require_relative('../models/antique.rb')
 require_relative('../models/auction.rb')
 require_relative('../models/wholesaler.rb')
 require_relative('../models/gift.rb')
+require_relative('../models/type.rb')
 also_reload('../models/*')
 
 #SHOW
