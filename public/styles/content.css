@@ -23,6 +23,11 @@
   border: black solid 2px;
 }
 
+.borderless {
+  border: 0px black solid;
+  background-color: none;
+}
+
 .auctions_container th {
   font-size: 32px;
   padding: 10px;
@@ -85,6 +90,7 @@ h2 {
   padding: 2px;
   display: inline-block;
   margin-left: 10px;
+  background-color: white;
 }
 
 .wholesaler_container div a:hover {

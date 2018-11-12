@@ -20,8 +20,21 @@ get '/auctions/new' do
   erb (:"auctions/new")
 end
 
+# CREATE
+post '/auctions' do
+  Auction.new(params).save
+  redirect to '/auctions'
+end
+
 # SHOW
 get '/auctions/:id' do
   @auction = Auction.find(params["id"].to_i)
   erb (:"auctions/show")
+end
+
+# DELETE
+post '/auctions/:id/delete' do
+  auction = Auction.find(params["id"].to_i)
+  auction.delete
+  redirect to '/auctions'
 end
