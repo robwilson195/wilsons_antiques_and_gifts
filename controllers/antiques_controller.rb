@@ -17,6 +17,11 @@ get '/antiques/new' do
   erb (:"antiques/new")
 end
 
+post '/antiques' do
+  Antique.new(params).save
+  redirect to '/'
+end
+
 #SHOW
 get '/antiques/:id' do
   @antique = Antique.find(params["id"].to_i)
