@@ -22,9 +22,22 @@
 }
 
 .form_wrapper input[type = submit] {
-  font-size: 32px;
+  font-size: 52px;
   position: relative;
-  left: 35%;
+  left: 25%;
+}
+
+.delete_button, .delete_table_button {
+  font-size: 52px;
+  position: relative;
+}
+
+.delete_button {
+  left: 50%;
+}
+
+.delete_table_button {
+  left: 15%;
 }
 
 textarea {

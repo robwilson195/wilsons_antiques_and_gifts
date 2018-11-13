@@ -45,8 +45,16 @@ class Gift
     SqlRunner.run(sql, value)
   end
 
+  def sufficient(sale_amount)
+    return @quantity >= sale_amount
+  end
+
   def sell(quantity_sold)
-    @quantity -= quantity_sold
+    @quantity -= quantity_sold if sufficient_stock(quantity_sold)
+  end
+
+  def buy(quantity_bought)
+    @quantity += quantity_bought
   end
 
   def wholesaler

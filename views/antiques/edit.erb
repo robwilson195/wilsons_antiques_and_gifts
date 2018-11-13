@@ -1,5 +1,6 @@
 <h2>Edit Antique</h2>
 <p>Please complete the fields listed below</p>
+
 <form action="/antiques/<%= @antique.id %>" method="post">
   <div class="form_wrapper">
     <div class="form_entry">
@@ -7,8 +8,8 @@
       <input type="text" name="name" value="<%=@antique.name%>"/>
     </div>
     <div class="form_entry">
-      <label for="Description">Description:</label><br>
-      <textarea rows="4" cols="40" type="text" name="description" value="<%=@antique.description%>"></textarea>
+      <label for="description">Description:</label><br>
+      <textarea rows="4" cols="40" type="text" name="description"><%=@antique.description%></textarea>
     </div>
     <div class="form_entry">
       <label for="type">Type:</label><br>
@@ -45,6 +46,6 @@
 </form>
 <form action="/antiques/<%= @antique.id %>/delete" method="post">
   <div class="form_entry">
-    <input type="submit" value="DELETE"/>
+    <input class="delete_button" type="submit" value="DELETE"/>
   </div>
 </form>

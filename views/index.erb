@@ -16,7 +16,7 @@
     <td><a href="/wholesalers"><%=gift.wholesaler.name%></td>
     <td><%=gift.purchase_price%></td>
     <td><%=gift.sale_price%></td>
-    <td><%=gift.quantity%></td>
+    <td class=<%="inventory_low" if gift.quantity <= 3 %>><%=gift.quantity%> <%= "- LOW" if gift.quantity <= 3 %></td>
   </tr>
   <% end %>
 </table>
