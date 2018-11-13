@@ -37,3 +37,15 @@ get '/gifts/:id/edit' do
   @gift = Gift.find(params["id"])
   erb (:"gifts/edit")
 end
+
+# UPDATE
+post '/gifts/:id' do
+  Gift.new(params).update
+  redirect to '/gifts/' + params["id"]
+end
+
+# DELETE
+post '/gifts/:id/delete' do
+  Gift.find(params["id"]).delete
+  redirect to '/'
+end
