@@ -3,15 +3,15 @@
 <form action="/antiques" method="post">
   <div class="form_wrapper">
     <div class="form_entry">
-      <label for="name">Name:</label>
+      <label for="name">Name:</label><br>
       <input type="text" name="name"/>
     </div>
     <div class="form_entry">
-      <label for="Description">Description:</label>
-      <input type="text" name="description"/>
+      <label for="Description">Description:</label><br>
+      <textarea name="description" rows="4" cols="40"></textarea>
     </div>
     <div class="form_entry">
-      <label for="type">Type:</label>
+      <label for="type">Type:</label><br>
       <select name="type">
         <% @types.each do |type|%>
         <option><%= type %></option>
@@ -19,7 +19,7 @@
       </select>
     </div>
     <div class="form_entry">
-      <label for="auction_id">Auction:</label>
+      <label for="auction_id">Auction:</label><br>
       <select name="auction_id">
         <% @auctions.each do |auction|%>
         <option value="<%= auction.id %>"><%= auction.venue %>, <%= auction.collection_date %></option>
@@ -27,15 +27,15 @@
       </select>
     </div>
     <div class="form_entry">
-      <label for="purchase_price">Purchase Price:</label>
+      <label for="purchase_price">Purchase Price:</label><br>
       <input type="text" name="purchase_price"/>
     </div>
     <div class="form_entry">
-      <label for="sale_price">Sale Price:</label>
+      <label for="sale_price">Sale Price:</label><br>
       <input type="text" name="sale_price"/>
     </div>
     <div class="form_entry">
-      <label for="image_url">Image URL:</label>
+      <label for="image_url">Image URL:</label><br>
       <input type="text" name="image_url"/>
     </div>
     <div class="form_entry">

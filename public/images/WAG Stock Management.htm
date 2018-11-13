@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<!-- saved from url=(0031)http://localhost:4567/gifts/new -->
+<html lang="en" dir="ltr"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  
+  <title>WAG Stock Management</title>
+
+  <link rel="stylesheet" type="text/css" href="./WAG Stock Management_files/structure.css">
+  <link rel="stylesheet" type="text/css" href="./WAG Stock Management_files/content.css">
+  <link rel="icon" href="http://localhost:4567/images/w_icon.jpg">
+
+</head>
+<body>
+  <header>
+    <h1>Wilson's Antiques and Gifts Stock Management</h1>
+  </header>
+  <main class="flex flex--row">
+    <nav>
+      <table>
+        <tbody><tr>
+          <td><a href="http://localhost:4567/">Home</a></td>
+        </tr>
+        <tr>
+          <td><a href="http://localhost:4567/wholesalers">Wholesalers</a></td>
+        </tr>
+        <tr>
+          <td><a href="http://localhost:4567/auctions">Auctions</a></td>
+        </tr>
+      </tbody></table>
+    </nav>
+    <section id="content">
+      <h2>New Gift</h2>
+<p>Please complete the fields listed below</p>
+<form action="http://localhost:4567/gifts" method="post">
+  <div class="form_wrapper">
+    <div class="form_entry">
+      <label for="name">Name:</label>
+      <input type="text" name="name">
+    </div>
+    <div class="form_entry">
+      <label for="Description">Description:</label>
+      <input type="text" name="description">
+    </div>
+    <div class="form_entry">
+      <label for="type">Type:</label>
+      <select name="type">
+        
+        <option>Accessory</option>
+        
+        <option>Aromatherapy</option>
+        
+        <option>Biscuits</option>
+        
+        <option>Card</option>
+        
+        <option>Chocolate</option>
+        
+        <option>Coffee</option>
+        
+        <option>Decoration</option>
+        
+        <option>Furniture</option>
+        
+        <option>Game</option>
+        
+        <option>Stationary</option>
+        
+        <option>Tea</option>
+        
+      </select>
+    </div>
+    <div class="form_entry">
+      <label for="quantity">Initial Order Quantity:</label>
+      <input type="text" name="quantity">
+    </div>
+    <div class="form_entry">
+      <label for="wholesaler_id">Wholesaler:</label>
+      <select name="wholesaler_id">
+        
+        <option value="3">Paladone</option>
+        
+        <option value="1">Puckator Ltd</option>
+        
+        <option value="2">Sparks Gift Wholesalers</option>
+        
+      </select>
+    </div>
+    <div class="form_entry">
+      <label for="purchase_price">Purchase Price:</label>
+      <input type="text" name="purchase_price">
+    </div>
+    <div class="form_entry">
+      <label for="sale_price">Sale Price:</label>
+      <input type="text" name="sale_price">
+    </div>
+    <div class="form_entry">
+      <label for="image_url">Image URL:</label>
+      <input type="text" name="image_url">
+    </div>
+    <div class="form_entry">
+      <input type="submit" value="Save">
+    </div>
+  </div>
+</form>
+
+    </section>
+  </main>
+
+
+</body></html>

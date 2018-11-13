@@ -18,20 +18,19 @@
 }
 
 .auctions_container td {
-  font-size: 24px;
+  font-size: 32px;
   padding: 10px;
   border: black solid 2px;
-}
-
-
-.auctions_container th {
-  font-size: 24px;
-  padding: 10px;
 }
 
 .borderless {
   border: 0px black solid;
   background-color: none;
+}
+
+.auctions_container th {
+  font-size: 32px;
+  padding: 10px;
 }
 
 .gifts_table a, .antiques_table a {

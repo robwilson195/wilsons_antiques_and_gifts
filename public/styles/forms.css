@@ -1,0 +1,44 @@
+.form_wrapper {
+  display: flex;
+  flex-flow: column wrap;
+  height: 50vh;
+  width: 40vw;
+  justify-content: space-around;
+  align-content: space-around;
+}
+
+.form_entry {
+  min-width: 80%;
+  margin-bottom: 10px;
+}
+
+.form_entry, .form_wrapper input[type = text]{
+  font-size: 16px;
+}
+
+.form_wrapper input[type = text] {
+  width: 60%;
+  border: black 1px solid;
+}
+
+.form_wrapper input[type = submit] {
+  font-size: 32px;
+  position: relative;
+  left: 35%;
+}
+
+textarea {
+  width: 60%;
+  resize: none;
+  font-size: 16px;
+  border: 1px solid black;
+}
+
+select {
+  min-width: 60%;
+  font-size: 16px;
+  margin-top: 5px;
+  border: black 1px solid;
+  border-radius: 0;
+  background-color: white;
+}
