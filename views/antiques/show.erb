@@ -7,10 +7,10 @@
     <p>Auction: <%=@antique.auction.venue%><%=@antique.auction.collection_date%></p>
     <p>Purchase Price: £<%=@antique.purchase_price%></p>
     <p>Sale Price: £<%=@antique.sale_price%></p>
-    <a href="/antiques/<%= wholesaler.id %>/edit">Edit</a>
+    <a href="/antiques/<%= @antique.id %>/edit">Edit</a>
   </div>
   <div class="antique_image">
-    <img src="<%= @antique.logo_url %>" alt="<%= antique.name %> Image">
+    <img src="<%= @antique.image_url %>" alt="<%= @antique.name %> Image">
   </div>
 </div>
 </section>
