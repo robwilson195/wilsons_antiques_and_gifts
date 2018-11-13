@@ -4,7 +4,7 @@
     <h3><%=@antique.name%></h3>
     <p><%=@antique.description%></p>
     <p>Type: <%=@antique.type%></p>
-    <p>Auction: <%=@antique.auction.venue%><%=@antique.auction.collection_date%></p>
+    <p>Auction: <%=@antique.auction.venue%>, <%=@antique.auction.collection_date%></p>
     <p>Purchase Price: £<%=@antique.purchase_price%></p>
     <p>Sale Price: £<%=@antique.sale_price%></p>
     <a href="/antiques/<%= @antique.id %>/edit">Edit</a>

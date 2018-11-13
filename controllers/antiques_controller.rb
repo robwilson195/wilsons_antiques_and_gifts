@@ -19,8 +19,9 @@ end
 
 # CREATE
 post '/antiques' do
-  Antique.new(params).save
-  redirect to '/antiques/' + params["id"]
+  antique = Antique.new(params)
+  antique.save
+  redirect to '/antiques/' + antique.id.to_s
 end
 
 # SHOW
