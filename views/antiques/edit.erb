@@ -1,0 +1,50 @@
+<h2>Edit Antique</h2>
+<p>Please complete the fields listed below</p>
+<form action="/antiques/<%= @antique.id %>" method="post">
+  <div class="form_wrapper">
+    <div class="form_entry">
+      <label for="name">Name:</label>
+      <input type="text" name="name" value="<%=@antique.name%>"/>
+    </div>
+    <div class="form_entry">
+      <label for="Description">Description:</label>
+      <input type="text" name="description" value="<%=@antique.description%>"/>
+    </div>
+    <div class="form_entry">
+      <label for="type">Type:</label>
+      <select name="type">
+        <% @types.each do |type|%>
+        <option <%= "selected" if @antique.type == type %> ><%= type %></option>
+        <% end %>
+      </select>
+    </div>
+    <div class="form_entry">
+      <label for="auction_id">Auction:</label>
+      <select name="auction_id">
+        <% @auctions.each do |auction|%>
+        <option <%= "selected" if @antique.auction.id == auction.id %> value="<%= auction.id %>"><%= auction.venue %>, <%= auction.collection_date %></option>
+        <% end %>
+      </select>
+    </div>
+    <div class="form_entry">
+      <label for="purchase_price">Purchase Price:</label>
+      <input type="text" name="purchase_price" value="<%=@antique.purchase_price%>"/>
+    </div>
+    <div class="form_entry">
+      <label for="sale_price">Sale Price:</label>
+      <input type="text" name="sale_price" value="<%=@antique.sale_price%>"/>
+    </div>
+    <div class="form_entry">
+      <label for="image_url">Image URL:</label>
+      <input type="text" name="image_url" value="<%=@antique.image_url%>"/>
+    </div>
+    <div class="form_entry">
+      <input type="submit" value="Update"/>
+    </div>
+  </div>
+</form>
+<form action="/antiques/<%= @antique.id %>/delete" method="post">
+  <div class="form_entry">
+    <input type="submit" value="DELETE"/>
+  </div>
+</form>
