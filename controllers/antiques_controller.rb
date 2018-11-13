@@ -10,15 +10,15 @@ require_relative('../models/gift.rb')
 require_relative('../models/type.rb')
 also_reload('../models/*')
 
-#SHOW
-get '/antiques/:id' do
-  @antique = Antique.find(params["id"].to_i)
-  erb (:"antiques/show")
-end
-
 # NEW
 get '/antiques/new' do
   @auctions = Auction.all_by_date
   @types = Type.all[:antiques]
   erb (:"antiques/new")
+end
+
+#SHOW
+get '/antiques/:id' do
+  @antique = Antique.find(params["id"].to_i)
+  erb (:"antiques/show")
 end
