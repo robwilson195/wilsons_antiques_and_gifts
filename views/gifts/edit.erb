@@ -1,0 +1,54 @@
+<h2>Update Gift</h2>
+<p>Please complete the fields listed below</p>
+<form action="/gifts/<%=@gift.id%>" method="post">
+  <div class="form_wrapper">
+    <div class="form_entry">
+      <label for="name">Name:</label>
+      <input type="text" name="name" value="<%=@gift.name%>"/>
+    </div>
+    <div class="form_entry">
+      <label for="Description">Description:</label>
+      <input type="text" name="description"value="<%=@gift.description%>"/>
+    </div>
+    <div class="form_entry">
+      <label for="type">Type:</label>
+      <select name="type">
+        <% @types.each do |type|%>
+        <option <%= "selected" if @gift.type == type %> ><%= type %></option>
+        <% end %>
+      </select>
+    </div>
+    <div class="form_entry">
+      <label for="quantity">Initial Order Quantity:</label>
+      <input type="text" name="quantity" value="<%=@gift.quantity%>"/>
+    </div>
+    <div class="form_entry">
+      <label for="wholesaler_id">Wholesaler:</label>
+      <select name="wholesaler_id">
+        <% @wholesalers.each do |wholesaler|%>
+        <option <%= "selected" if @gift.wholesaler.id == wholesaler.id %> value="<%= wholesaler.id %>"><%= wholesaler.name %></option>
+        <% end %>
+      </select>
+    </div>
+    <div class="form_entry">
+      <label for="purchase_price">Purchase Price:</label>
+      <input type="text" name="purchase_price" value=" <%=@gift.purchase_price%>"/>
+    </div>
+    <div class="form_entry">
+      <label for="sale_price">Sale Price:</label>
+      <input type="text" name="sale_price" value="<%=@gift.sale_price%>"/>
+    </div>
+    <div class="form_entry">
+      <label for="image_url">Image URL:</label>
+      <input type="text" name="image_url" value="<%=@gift.image_url%>"/>
+    </div>
+    <div class="form_entry">
+      <input type="submit" value="Update"/>
+    </div>
+  </div>
+</form>
+<form action="/gifts/<%= @gift.id %>/delete" method="post">
+  <div class="form_entry">
+    <input type="submit" value="DELETE"/>
+  </div>
+</form>

@@ -1,3 +1,17 @@
-<h1>Hello World</h1>
-
-<p><%= @gift.name %></p>
+<section class="gift_page">
+<div class="gift_container">
+  <div class="gift_details">
+    <h3><%=@gift.name%></h3>
+    <p><%=@gift.description%></p>
+    <p>Type: <%=@gift.type%></p>
+    <p>Quantity: <%=@gift.quantity%></p>
+    <p>Wholesaler: <%=@gift.wholesaler.name%></p>
+    <p>Purchase Price: £<%=@gift.purchase_price%></p>
+    <p>Sale Price: £<%=@gift.sale_price%></p>
+    <a href="/gifts/<%= @gift.id %>/edit">Edit</a>
+  </div>
+  <div class="gift_image">
+    <img src="<%= @gift.image_url %>" alt="<%= @gift.name %> Image">
+  </div>
+</div>
+</section>
