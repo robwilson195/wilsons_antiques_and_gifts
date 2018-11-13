@@ -60,12 +60,28 @@ h2 {
   align-items: center;
 }
 
-.wholesaler_container img {
+.antique_container, .gift_container {
+  margin: 10px auto;
+  width: 90%;
+  display: flex;
+  align-items: center;
+  font-size: 22px;
+  border: 2px solid hsla(201, 67%, 50%, 1);
+  border-radius: 10px;
+  background-color: white;
+  box-shadow: 5px 5px 5px grey;
+}
+
+
+.wholesaler_container img, .antique_container img, .gift_container img {
   width: 100%;
   height: auto;
 }
 
-.wholesaler_container div {
+.antique_container img, .gift_container img {
+}
+
+.wholesaler_container div, .antique_container div, .gift_container div {
   display: inline-block;
   justify-content: center;
   align-content: center;
@@ -74,7 +90,7 @@ h2 {
   margin: 10px auto;
 }
 
-.wholesaler_container div a {
+.wholesaler_container div a, .antique_container div a, .gift_container div a {
   text-decoration: none;
   color: black;
   border: 2px black solid;
@@ -82,19 +98,12 @@ h2 {
   display: inline-block;
   margin-left: 10px;
   border-radius: 3px;
-}
-
-.wholesaler_container div a {
-  text-decoration: none;
-  color: black;
-  border: 2px black solid;
-  padding: 2px;
-  display: inline-block;
-  margin-left: 10px;
   background-color: white;
+  box-shadow: 2px 2px 2px grey;
+
 }
 
-.wholesaler_container div a:hover {
+.wholesaler_container div a:hover, .antique_container div a:hover, .gift_container div a:hover {
   border: 2px red solid;
   color: red;
 }

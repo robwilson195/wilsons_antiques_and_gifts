@@ -4,6 +4,7 @@ body {
   margin: 0px;
   background-color: hsla(201, 67%, 90%, 1);
   box-sizing: border-box;
+  font-family: Verdana;
 }
 
 header {
@@ -21,7 +22,8 @@ header {
 header h1 {
   position: relative;
   margin-top: 0;
-  padding-top: 20px;
+  padding-top: 15px;
+  font-family: cursive;
 }
 
 main {
@@ -34,6 +36,7 @@ nav {
   background-color: hsla(201, 67%, 77%, 1);
   border-right: 3px solid hsla(201, 67%, 50%, 1);
   height: auto;
+  font-family: cursive;
 }
 
 nav td {
