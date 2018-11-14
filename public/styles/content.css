@@ -134,3 +134,14 @@ h2 {
   margin: 0 auto;
   min-width: 800px;
 }
+
+.sort_bar {
+  display: inline-flex;
+  width: 50vw;
+  float: right;
+  align-items: center;
+}
+
+.sort_bar select {
+  width: 20%;
+}

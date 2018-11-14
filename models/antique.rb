@@ -99,12 +99,6 @@ class Antique
     return result.map{|antique| Antique.new(antique)}
   end
 
-  def self.all_by_quantity
-    sql = "SELECT * FROM antiques
-    ORDER BY quantity ASC"
-    result = SqlRunner.run(sql)
-    return result.map{|antique| Antique.new(antique)}
-  end
 
   def self.find(id)
     sql = "SELECT * FROM antiques WHERE id = $1"

@@ -1,6 +1,19 @@
 <form action="/" method="get">
 <h2><em>Gifts:</em></h2>
 <a class="add_button" href="/gifts/new">+ Gift</a>
+<div class="sort_bar">
+  <p>Sort by: </p>
+  <select name="gift_sort">
+    <option value="name" <%= "selected" if @gift_sort_stick == "name" %> >Name</option>
+    <option value="type" <%= "selected" if @gift_sort_stick == "type" %> >Type</option>
+    <option value="wholesaler" <%= "selected" if @gift_sort_stick == "wholesaler" %> >Wholesaler</option>
+    <option value="purchase_price" <%= "selected" if @gift_sort_stick == "purchase_price" %> >Purchase Price</option>
+    <option value="sale_price" <%= "selected" if @gift_sort_stick == "sale_price" %> >Sale Price</option>
+    <option value="quantity" <%= "selected" if @gift_sort_stick == "quantity" %> >Quantity</option>
+  </select>
+  <input class="sort_button" type="submit" value="Sort"/>
+</div>
+
 <table class="gifts_table">
   <tr>
     <th>Name</th>
@@ -20,10 +33,22 @@
     <td class=<%="inventory_low" if gift.quantity <= 3 %>><%=gift.quantity%><%= " - LOW" if gift.quantity <= 3 %></td>
   </tr>
   <% end %>
-</table>
+</table><br>
 
 <h2><em>Antiques:</em></h2>
 <a class="add_button" href="/antiques/new">+ Antique</a>
+<div class="sort_bar">
+  <p>Sort by: </p>
+  <select name="antique_sort">
+    <option value="name" <%= "selected" if @antique_sort_stick == "name" %> >Name</option>
+    <option value="type" <%= "selected" if @antique_sort_stick == "type" %> >Type</option>
+    <option value="auction" <%= "selected" if @antique_sort_stick == "auction" %> >Auction</option>
+    <option value="purchase_price" <%= "selected" if @antique_sort_stick == "purchase_price" %> >Purchase Price</option>
+    <option value="sale_price" <%= "selected" if @antique_sort_stick == "sale_price" %> >Sale Price</option>
+  </select>
+  <input class="sort_button" type="submit" value="Sort"/>
+</div>
+
 <table class="antiques_table">
   <tr>
     <th>Name</th>
