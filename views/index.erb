@@ -1,3 +1,4 @@
+<form action="/" method="get">
 <h2><em>Gifts:</em></h2>
 <a class="add_button" href="/gifts/new">+ Gift</a>
 <table class="gifts_table">
@@ -14,9 +15,9 @@
     <td><a href="/gifts/<%= gift.id %>"><%=gift.name%></a></td>
     <td><%=gift.type%></td>
     <td><a href="/wholesalers"><%=gift.wholesaler.name%></td>
-    <td><%=gift.purchase_price%></td>
-    <td><%=gift.sale_price%></td>
-    <td class=<%="inventory_low" if gift.quantity <= 3 %>><%=gift.quantity%> <%= "- LOW" if gift.quantity <= 3 %></td>
+    <td>£ <%=gift.purchase_price%></td>
+    <td>£ <%=gift.sale_price%></td>
+    <td class=<%="inventory_low" if gift.quantity <= 3 %>><%=gift.quantity%><%= " - LOW" if gift.quantity <= 3 %></td>
   </tr>
   <% end %>
 </table>
@@ -36,8 +37,9 @@
     <td><a href="/antiques/<%= antique.id %>"><%=antique.name%></a></td>
     <td><%=antique.type%></td>
     <td><a href="/auctions"><%=antique.auction.venue%></a></td>
-    <td><%=antique.purchase_price%></td>
-    <td><%=antique.sale_price%></td>
+    <td>£ <%=antique.purchase_price%></td>
+    <td>£ <%=antique.sale_price%></td>
   </tr>
   <% end %>
 </table>
+</form>
