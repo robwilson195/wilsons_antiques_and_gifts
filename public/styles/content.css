@@ -145,3 +145,10 @@ h2 {
 .sort_bar select {
   width: 20%;
 }
+
+.sort_bar input[type = submit] {
+  font-size: 22px;
+  position: relative;
+  top: 3px;
+  left: 5px;
+}
