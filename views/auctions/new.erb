@@ -1,15 +1,14 @@
 <h2>New Auction</h2>
 <p>Please complete the fields listed below.</p>
-<p>When entering the date, make sure to use the format: YYYY-MM-DD</p>
 <form action="/auctions" method="post">
   <div class="form_wrapper">
     <div class="form_entry">
-      <label for="venue">Venue:</label>
+      <label for="venue">Venue:</label><br>
       <input type="text" name="venue"/>
     </div>
     <div class="form_entry">
-      <label for="collection_date">Event Date:</label>
-      <input type="text" name="collection_date"/>
+      <label for="collection_date">Event Date:</label><br>
+      <input type="date" name="collection_date"/>
     </div>
     <div class="form_entry">
       <input type="submit" value="Save"/>

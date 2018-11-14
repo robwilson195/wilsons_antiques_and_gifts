@@ -21,6 +21,13 @@
   border: black 1px solid;
 }
 
+.form_entry input[type = date] {
+  width: 60%;
+  border: black 1px solid;
+  font-size: 16px;
+  font-family: inherit;
+}
+
 .form_wrapper input[type = submit] {
   font-size: 52px;
   position: relative;

@@ -85,7 +85,7 @@ antique5.save
 wholesaler1 = Wholesaler.new({
   "name" => "Puckator Ltd",
   "description" => "Quality novelties, toys, homeware, jewellery, aromatherapy, collectavles and souvenirs.",
-  "contact_number" => "05431 299233",
+  "contact_number" => "05431299233",
   "website_url" => "https://www.puckator.co.uk/wholesale/",
   "logo_url" => "https://www.autumnfair.com/__resource/companyProfiles/A7E9E0D-041F-4200-B352-A80EDB305F90-logo.png"
   })
@@ -94,7 +94,7 @@ wholesaler1.save
 wholesaler2 = Wholesaler.new({
   "name" => "Sparks Gift Wholesalers",
   "description" => "Seasonal gifts and souvenirs.",
-  "contact_number" => "05429 112233",
+  "contact_number" => "05429112233",
   "website_url" => "https://www.sparksgiftwholesalers.co.uk/",
   "logo_url" => "http://www.thewholesaler.co.uk/upload/sparksgiftlogo.jpg"
   })
@@ -103,7 +103,7 @@ wholesaler2.save
 wholesaler3 = Wholesaler.new({
   "name" => "Paladone",
   "description" => "Large gift brands at excellent value.",
-  "contact_number" => "05311 123678",
+  "contact_number" => "05311123678",
   "website_url" => "https://paladone.com/",
   "logo_url" => "https://paladone.com/image/2018%20Logo/logo.png"
   })
