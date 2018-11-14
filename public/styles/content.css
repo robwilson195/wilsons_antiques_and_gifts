@@ -44,7 +44,7 @@
 }
 
 .gifts_table a:hover, .antiques_table a:hover {
-  color: red;
+  color: hsla(201, 67%, 77%, 1);
 }
 
 h2 {
