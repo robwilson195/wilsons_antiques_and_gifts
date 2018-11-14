@@ -25,3 +25,21 @@ To simulate the shop with a pre-existing inventory, run the 'seed.rb' file, foun
 
 `ruby db/seed.rb`
 
+## The project brief
+
+#### MVP
+- The inventory should track mass-produced products, including a name, description, stock quantity, buying cost, and selling price.
+- The inventory should track manufacturers, including a name and any other appropriate details.
+- A separate inventory should track antiques currently in store, including name, description, paid price and objective selling price.
+- This second inventory will also track the auction at which the item was acquired, the date it took place and the venue in which it was held.
+- Users will be able to see a list of auctions.
+- The shop will be able to sell both gifts and antiques, adjusting the quantity of gifts as appropriate and removing antiques once sold.
+- Users will be able to create and remove new bulk stock items, antiques, manufacturers and auctions.
+- Show an inventory page, listing all the details for all the products in stock split over two tables to distinguish between gifts and antiques.
+- As well as showing stock quantity as a number, the app should visually highlight "low stock" and "out of stock" items to the user.
+
+#### Possible Extensions
+- Calculate the markup on items in the store, and display it in the inventory
+- Filter the inventory lists by manufacturer/auction. 
+- Categorise both gifts and antiques by category/type which the user can then filter the main inventory by.
+- Add finance channel to monitor money total and react to sales.
