@@ -9,6 +9,22 @@
     <p>Purchase Price: £<%=@gift.purchase_price%></p>
     <p>Sale Price: £<%=@gift.sale_price%></p>
     <a href="/gifts/<%= @gift.id %>/edit">Edit</a>
+    <div class="buy_sell_container">
+      <form class="" action="gifts/<%= @gift.id %>/order-and-sell" method="post">
+        <div class="sell_section">
+          <label for="sell_quantity">Sell Units:</label>
+          <input type="text" name="sell_quantity"/>
+        </div>
+        <div class="buy_secion">
+          <label for="buy_quantity">Order Units:</label>
+          <input type="text" name="buy_quantity">
+        </div>
+        <input type="submit" value="Sell/Order">
+      </form>
+    </div>
+    <form class="" action="gifts/<%= @gift.id %>/order-and-sell" method="post">
+
+    </form>
   </div>
   <div class="gift_image">
     <img src="<%= @gift.image_url %>" alt="<%= @gift.name %> Image">

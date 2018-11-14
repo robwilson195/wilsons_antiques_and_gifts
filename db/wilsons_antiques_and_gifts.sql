@@ -8,7 +8,7 @@ CREATE TABLE wholesalers(
   id SERIAL8 PRIMARY KEY,
   name VARCHAR(255),
   description TEXT,
-  contact_number INT4,
+  contact_number INT8,
   logo_url TEXT
 );
 
