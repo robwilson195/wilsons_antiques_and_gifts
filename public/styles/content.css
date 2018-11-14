@@ -140,10 +140,12 @@ h2 {
   width: 50vw;
   float: right;
   align-items: center;
+  margin-left: 20px;
 }
 
 .sort_bar select {
   width: 20%;
+  min-width: 0%;
 }
 
 .sort_bar input[type = submit] {
@@ -159,9 +161,18 @@ h2 {
   flex-direction: row;
   font-size: 16px;
   margin-right: 10px;
+  width: 60vw;
 }
 
 .buy_sell_container input[type=text] {
   width: 4em;
   font-size: 16px;
+  border: 1px black solid;
+}
+
+.buy_sell_container input[type=submit] {
+  position: relative;
+  left: 4.5em;
+  font-size: 16px;
+  margin: 0 auto;
 }

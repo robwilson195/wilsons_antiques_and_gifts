@@ -38,6 +38,15 @@ get '/gifts/:id/edit' do
   erb (:"gifts/edit")
 end
 
+# BUY / SELL
+post "/gifts/:id/order-and-sell" do
+  gift = Gift.find(params["id"])
+  quantity_sold = params["sell_quantity"].to_i - params["buy_quantity"].to_i
+  gift.sell(quantity_sold)
+  gift.update
+  redirect to '/gifts/' + params["id"]
+end
+
 # UPDATE
 post '/gifts/:id' do
   Gift.new(params).update
